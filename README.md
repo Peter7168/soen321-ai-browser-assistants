@@ -31,7 +31,7 @@ analysis/     analysis scripts (generic marker search, Copilot-specific report, 
 results/      per-assistant results: answer transcripts, lab notes, screenshots, reports
 ```
 
-Setup and usage: see [SETUP_GUIDE.md](SETUP_GUIDE.md).
+Setup and usage: see [SETUP_GUIDE.md](SETUP_GUIDE.md). Who did what: [CONTRIBUTIONS.md](CONTRIBUTIONS.md).
 
 ## Results so far
 
