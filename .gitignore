@@ -1,0 +1,12 @@
+# Never commit: raw traffic (contains login tokens), browser profiles, local environment
+*.flow
+*.har
+evidence/
+profiles/
+.venv/
+tools/spki.txt
+tools/selftest/
+tools/jobs/
+analysis/output/
+__pycache__/
+.stop*

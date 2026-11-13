@@ -1,0 +1,26 @@
+label,value
+dry_top_marker,ZQX-DRY-TOP-4417
+dry_mid_marker,ZQX-DRY-MID-9032
+dry_bottom_marker,ZQX-DRY-BOT-6250
+dry_form_name,Dry Runner
+dry_form_email,dry.runner@example.org
+e1_article,ZQX-E1-ART-2207
+e1_form_ref,ZQX-E1-FRM-6612
+e1_form_name,Avery Quinlan
+e1_form_email,avery.q.soen321@example.org
+e1_form_phone,514-555-0142
+e1_form_memberid,NCC-48213
+e1_form_address,48 Rue Fictive
+e1_health_ref,ZQX-E1-HLT-3381
+e1_health_card,QNLA-7104-1882
+e1_health_diagnosis,type 2 diabetes
+e3_top,ZQX-E3-TOP-1043
+e3_mid,ZQX-E3-MID-5527
+e3_bottom,ZQX-E3-BOT-9904
+e3_hidden_div,ZQX-E3-HIDDEN-7719
+e3_html_comment,ZQX-E3-COMMENT-8842
+e3_meta_tag,ZQX-E3-META-5160
+e4_tabA,ZQX-TABA-1188
+e4_tabA_name,Jordan Ellery
+e4_tabB,ZQX-TABB-5520
+e4_tabB_name,Morgan Pike

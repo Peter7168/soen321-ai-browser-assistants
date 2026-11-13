@@ -1,0 +1,16 @@
+- 2026-11-13 12:00 | E0 run 1 | Edge 157.0.4341.46 | 25138 KB | notes: setup only - signed in to a Microsoft account, opened Copilot sidebar
+- 2026-11-13 12:05 | E0 run 2 | Edge 157.0.4341.46 | 5739 KB | notes: Copilot not used in this run (page button only) - ignore
+- 2026-11-13 12:06 | E0 run 3 | Edge 157.0.4341.46 | 5905 KB | notes: dry-run page, typed name/email in form, asked Copilot sidebar to summarize the page. Full visible page text + typed form values sent to substrate.office.com (WebSocket ChatHub, fetch_browser_content)
+- 2026-11-13 12:56 | E1 run 1 | Edge (automated via DevTools protocol) | 1350 KB | notes: run by tools\auto_copilot.py; answers in E1_run1_transcript.md
+- 2026-11-13 13:06 | E2 run 1 | Edge (automated via DevTools protocol) | 4832 KB | notes: PARTIAL (8 of 15 prompts; script stuck on a Copilot follow-up question); run by tools\auto_copilot.py; answers in E2_run1_transcript.md
+- 2026-11-13 13:07 | E3 run 1 | Edge (automated via DevTools protocol) | 728 KB | notes: run by tools\auto_copilot.py; answers in E3_run1_transcript.md
+- 2026-11-13 13:08 | E4 run 1 | Edge (automated via DevTools protocol) | 823 KB | notes: run by tools\auto_copilot.py; answers in E4_run1_transcript.md
+- 2026-11-13 13:09 | E1 run 2 | Edge (automated via DevTools protocol) | 1133 KB | notes: run by tools\auto_copilot.py; answers in E1_run2_transcript.md
+- 2026-11-13 13:25 | E2 run 2 | Edge (automated via DevTools protocol) | 6648 KB | notes: PARTIAL (13 of 15; same chat complete, new chat q1-q3); run by tools\auto_copilot.py; answers in E2_run2_transcript.md
+- 2026-11-13 13:27 | E3 run 2 | Edge (automated via DevTools protocol) | 684 KB | notes: run by tools\auto_copilot.py; answers in E3_run2_transcript.md
+- 2026-11-13 13:27 | E4 run 2 | Edge (automated via DevTools protocol) | 734 KB | notes: run by tools\auto_copilot.py; answers in E4_run2_transcript.md
+- 2026-11-13 13:34 | E2 run 3 | Edge (automated via DevTools protocol) | 7946 KB | notes: run by tools\auto_copilot.py; answers in E2_run3_transcript.md
+- 2026-11-13 13:38 | E2 run 4 | Edge (automated via DevTools protocol) | 5775 KB | notes: PARTIAL (same chat complete; new chat stopped at q1: Copilot free daily limit reached, resets 7 PM); run by tools\auto_copilot.py; answers in E2_run4_transcript.md
+- note | E2 runs 3 and 4 used the fixed script (auto-skips Copilot's multiple-choice follow-up questions). E2 run 3 is the complete reference run. In run 3 the skipped follow-up shifted one answer: the gift answer appears under q4 and q5 covers both weekend and car.
+- note | E2 runs share one Microsoft account, so later runs could be influenced by Copilot memory of earlier runs; new-chat answers showed no sign of it (no persona recalled).
+- note | E4 run 1 and 2: an extra tab '127.0.0.1' with ERR_PROXY_CONNECTION_FAILED was open (left over from the recording restart between runs); it shows up in the tab lists.

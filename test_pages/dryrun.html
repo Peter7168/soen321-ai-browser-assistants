@@ -1,0 +1,37 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Dry run - SOEN 321</title></head>
+<body style="font-family:sans-serif;max-width:700px;margin:40px auto;line-height:1.5">
+<h1>Dry run page</h1>
+<p>Top marker: <b>ZQX-DRY-TOP-4417</b></p>
+<p>This page checks the recording pipeline without any AI assistant. The button below pretends to be an
+assistant: it sends the page text and form values to a local server (plain HTTP) and the top marker to
+wikipedia.org (HTTPS). If the analysis finds the markers afterwards, recording and HTTPS decryption work.</p>
+<p>Middle marker: <b>ZQX-DRY-MID-9032</b></p>
+<form onsubmit="return false">
+  <label>Full name <input id="name" value=""></label><br>
+  <label>Email <input id="email" value=""></label><br>
+</form>
+<p>Type <b>Dry Runner</b> as the name and <b>dry.runner@example.org</b> as the email, then click:</p>
+<button id="go">Simulate an assistant sending this page</button>
+<p id="status"></p>
+<p>Bottom marker: <b>ZQX-DRY-BOT-6250</b></p>
+<script>
+async function report(msg) {  // logged by the local server, so the self-test can see what happened
+  try { await fetch("/report?msg=" + encodeURIComponent(msg)); } catch (e) {}
+}
+document.getElementById("go").onclick = async () => {
+  const s = document.getElementById("status");
+  const body = JSON.stringify({page: document.body.innerText,
+                               name: document.getElementById("name").value,
+                               email: document.getElementById("email").value});
+  try { await fetch("/fake-assistant", {method: "POST", body}); } catch (e) {}
+  try { await fetch("https://www.wikipedia.org/?q=ZQX-DRY-TOP-4417", {mode: "no-cors"}); s.textContent = "Sent. Now close this Edge window."; report("https-ok"); }
+  catch (e) { s.textContent = "HTTPS request failed: " + e; report("https-failed " + e); }
+};
+if (location.search.includes("auto=1")) {  // used by tools\selftest.ps1
+  document.getElementById("name").value = "Dry Runner";
+  document.getElementById("email").value = "dry.runner@example.org";
+  setTimeout(() => document.getElementById("go").click(), 1500);
+}
+</script>
+</body></html>
