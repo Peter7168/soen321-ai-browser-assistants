@@ -23,19 +23,19 @@ Vekaria et al., USENIX Security 2025. Each assistant: E1 to E4, 2 runs each = 8 
 ## Remaining tasks
 
 ### Experiments
-- [ ] **Sider**: E1 to E4, 2 runs each (assigned: Parsa)
-- [ ] **Merlin**: E1 to E4, 2 runs each (assigned: Georges)
-- [ ] **Perplexity**: E1 to E4, 2 runs each (assigned: Mohamed)
+- [ ] **Sider**: E1 to E4, 2 runs each
+- [ ] **Merlin**: E1 to E4, 2 runs each
+- [ ] **Perplexity**: E1 to E4, 2 runs each
 - [ ] Copilot, optional: finish E2 run 4's new-chat questions (stopped at the daily limit)
 - [ ] Copilot, optional: check by hand whether Copilot asks permission before reading other tabs
 
 ### Analysis and writing
 - [ ] Run the analysis on each assistant's recordings and write `results/<assistant>/RESULTS.md` in the same format as Copilot's
 - [ ] Score E2 per assistant (`analysis/score_e2.py` first pass, then check every hit by hand)
-- [ ] Cross-assistant comparison table: 4 assistants x 4 experiments (Maria-Christine)
-- [ ] Report: introduction, background, related work (Andrii); methodology; results per experiment; discussion; limitations; conclusion
-- [ ] Slides (Maria-Christine)
-- [ ] Final proofread and references (Georges)
+- [ ] Cross-assistant comparison table: 4 assistants x 4 experiments
+- [ ] Report: introduction, background, related work; methodology; results per experiment; discussion; limitations; conclusion
+- [ ] Slides
+- [ ] Final proofread and references
 - [ ] Each person fills in their section of `CONTRIBUTIONS.md`
 
 ## How to do an assistant (what you can reuse)
