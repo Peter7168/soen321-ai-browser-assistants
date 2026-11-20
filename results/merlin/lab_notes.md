@@ -1,0 +1,15 @@
+- 2026-11-19 18:29 | E0 run 1 | Edge 157.0.4341.60 | 47360 KB | notes: setup only - installed Merlin 8.4.6 from the Chrome Web Store (not on Edge Add-ons), signed in with a throwaway Google account. Free plan: 500 queries/day.
+- 2026-11-19 18:39 | E1 run 1 | Edge 157.0.4341.60 | 5436 KB | notes: failed attempt, kept as E1_http_attempt.flow - test pages on http://127.0.0.1; Merlin said "unable to read page" (it only reads https pages). All later runs use https://soen321.test/.
+- 2026-11-19 19:01 | E1 run 1 | Edge, Merlin 8.4.6 (automated via DevTools protocol) | 1014 KB | notes: run by tools/auto_merlin.py
+- 2026-11-19 19:08 | E1 run 2 (first attempt) | discarded: the script sent a prompt while Merlin was still busy. Script fixed, run redone below.
+- 2026-11-19 19:10 | E1 run 2 | Edge, Merlin 8.4.6 (automated via DevTools protocol) | 665 KB | notes: run by tools/auto_merlin.py
+- 2026-11-19 19:12 | E2 run 1 (first attempt) | discarded: the script sent a prompt while Merlin was still busy. Script fixed, run redone below on a blank page.
+- 2026-11-19 19:13 | E3 run 1 (first attempt) | discarded: Merlin was still finishing the interrupted E2 run 1 during the no-use period. Redone below.
+- 2026-11-19 19:14 | E4 run 1 | Edge, Merlin 8.4.6 (automated via DevTools protocol) | 486 KB | notes: run by tools/auto_merlin.py
+- 2026-11-19 19:16 | E2 run 2 (first attempt) | discarded: the script sent a prompt while Merlin was still busy. Script fixed, run redone below on a blank page.
+- 2026-11-19 19:18 | E3 run 2 (first attempt) | discarded: the script sent a prompt while Merlin was still busy. Script fixed, run redone below.
+- 2026-11-19 19:19 | E4 run 2 | Edge, Merlin 8.4.6 (automated via DevTools protocol) | 430 KB | notes: run by tools/auto_merlin.py
+- 2026-11-19 19:29 | E2 run 1 | Edge, Merlin 8.4.6 (automated via DevTools protocol) | 4404 KB | notes: run by tools/auto_merlin.py
+- 2026-11-19 19:30 | E3 run 2 | Edge, Merlin 8.4.6 (automated via DevTools protocol) | 340 KB | notes: run by tools/auto_merlin.py
+- 2026-11-19 19:38 | E2 run 2 | Edge, Merlin 8.4.6 (automated via DevTools protocol) | 5255 KB | notes: run by tools/auto_merlin.py
+- 2026-11-19 19:40 | E3 run 1 | Edge, Merlin 8.4.6 (automated via DevTools protocol) | 320 KB | notes: run by tools/auto_merlin.py

@@ -26,8 +26,9 @@ tools/        recording toolkit (Windows + Edge + mitmproxy)
   analyze.ps1     search all recordings for our fake data and markers
   selftest.ps1    automatic end-to-end check (run_selftest.cmd)
   auto_copilot.py runs E1-E4 on Copilot in Edge automatically over the DevTools protocol
+  auto_merlin.py  runs E1-E4 on the Merlin extension automatically (same approach)
 test_pages/   runbook page with every prompt, the E1-E4 test pages, markers.csv
-analysis/     analysis scripts (generic marker search, Copilot-specific report, E2 scoring)
+analysis/     analysis scripts (generic marker search, Copilot- and Merlin-specific reports, E2 scoring)
 results/      per-assistant results: answer transcripts, lab notes, screenshots, reports
 ```
 
@@ -35,7 +36,8 @@ Setup and usage: see [SETUP_GUIDE.md](SETUP_GUIDE.md). Who did what: [CONTRIBUTI
 
 ## Results so far
 
-Copilot in Edge is done; see [results/copilot/RESULTS.md](results/copilot/RESULTS.md). Sider, Merlin and Perplexity are in progress.
+Copilot in Edge is done; see [results/copilot/RESULTS.md](results/copilot/RESULTS.md).
+Merlin is done; see [results/merlin/RESULTS.md](results/merlin/RESULTS.md). Sider and Perplexity are in progress.
 
 ## Not in this repository
 
