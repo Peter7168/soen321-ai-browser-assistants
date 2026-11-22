@@ -24,7 +24,8 @@ Vekaria et al., USENIX Security 2025. Each assistant: E1 to E4, 2 runs each = 8 
 ## Remaining tasks
 
 ### Experiments
-- [ ] **Sider**: E1 to E4, 2 runs each
+- [x] Sider: automation script (`tools/auto_sider.py`), analysis script (`analysis/sider_report.py`), run guide (`results/sider/HOW_TO_RUN.md`)
+- [ ] **Sider**: E1 to E4, 2 runs each (follow `results/sider/HOW_TO_RUN.md`)
 - [ ] **Perplexity**: E1 to E4, 2 runs each
 - [ ] Copilot, optional: finish E2 run 4's new-chat questions (stopped at the daily limit)
 - [ ] Copilot, optional: check by hand whether Copilot asks permission before reading other tabs
@@ -46,6 +47,9 @@ Vekaria et al., USENIX Security 2025. Each assistant: E1 to E4, 2 runs each = 8 
 5. Put transcripts, screenshots, `lab_notes.md` and `RESULTS.md` in `results/<name>/`. **Never commit `.flow` files** (they contain login tokens); keep them on the shared drive.
 
 `tools/auto_merlin.py` automates Merlin the same way; `analysis/merlin_report.py` decodes its chat format.
+`tools/auto_sider.py` automates Sider; it finds the chat box and buttons by role, so `tools/auto_sider.py probe` shows
+what it can see before the real runs. `analysis/sider_report.py` does not need Sider's format: it searches every
+request and WebSocket message, so it is a good starting point for Perplexity too.
 
 `tools/auto_copilot.py` automates Copilot only (its sidebar is a page reachable over Edge's DevTools protocol). An
 extension's side panel or popup may also be reachable that way (launch Edge with `--remote-debugging-port`, list

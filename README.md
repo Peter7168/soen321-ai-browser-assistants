@@ -27,8 +27,9 @@ tools/        recording toolkit (Windows + Edge + mitmproxy)
   selftest.ps1    automatic end-to-end check (run_selftest.cmd)
   auto_copilot.py runs E1-E4 on Copilot in Edge automatically over the DevTools protocol
   auto_merlin.py  runs E1-E4 on the Merlin extension automatically (same approach)
+  auto_sider.py   runs E1-E4 on the Sider extension automatically (same approach; `probe` mode to check it first)
 test_pages/   runbook page with every prompt, the E1-E4 test pages, markers.csv
-analysis/     analysis scripts (generic marker search, Copilot- and Merlin-specific reports, E2 scoring)
+analysis/     analysis scripts (generic marker search, Copilot-, Merlin- and Sider-specific reports, E2 scoring)
 results/      per-assistant results: answer transcripts, lab notes, screenshots, reports
 ```
 
