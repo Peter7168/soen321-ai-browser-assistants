@@ -43,5 +43,5 @@ Sider is done; see [results/sider/RESULTS.md](results/sider/RESULTS.md). Perplex
 
 ## Not in this repository
 
-Raw traffic recordings (`.flow`) are kept off GitHub on purpose: they contain the test accounts' login tokens and
-network details. They are available to the course staff on request.
+Raw traffic recordings (`.flow`) are kept off GitHub on purpose: they contain the test accounts' login tokens and our
+network details. 
