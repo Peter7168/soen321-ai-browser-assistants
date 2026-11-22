@@ -20,7 +20,9 @@
 -
 
 ## Georges
--
+- Ran E1 to E4 on Merlin (2 runs each), analyzed the recordings and wrote up the results (`results/merlin/`)
+- Automated the Merlin experiments over Edge's DevTools protocol (`tools/auto_merlin.py`)
+- Wrote the Merlin analysis script (`analysis/merlin_report.py`)
 
 ## Mohamed
 -

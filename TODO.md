@@ -1,6 +1,6 @@
 # Project status and remaining tasks
 
-Read this first if you are picking up the project (person or AI agent). Updated 2026-11-13.
+Read this first if you are picking up the project (person or AI agent). Updated 2026-11-19.
 
 ## Goal
 Measure 4 AI browser assistants (Copilot in Edge, Sider, Merlin, Perplexity) with 4 experiments each, following
@@ -19,12 +19,12 @@ Vekaria et al., USENIX Security 2025. Each assistant: E1 to E4, 2 runs each = 8 
 - [x] Analysis scripts (`analysis/`)
 - [x] Team setup guide (`SETUP_GUIDE.md`)
 - [x] **Copilot in Edge: all four experiments done and written up** (`results/copilot/RESULTS.md`)
+- [x] **Merlin: all four experiments done (2 runs each) and written up** (`results/merlin/RESULTS.md`)
 
 ## Remaining tasks
 
 ### Experiments
 - [ ] **Sider**: E1 to E4, 2 runs each
-- [ ] **Merlin**: E1 to E4, 2 runs each
 - [ ] **Perplexity**: E1 to E4, 2 runs each
 - [ ] Copilot, optional: finish E2 run 4's new-chat questions (stopped at the daily limit)
 - [ ] Copilot, optional: check by hand whether Copilot asks permission before reading other tabs
@@ -45,6 +45,8 @@ Vekaria et al., USENIX Security 2025. Each assistant: E1 to E4, 2 runs each = 8 
 4. Analyze: `tools/analyze.ps1` (generic, needs mitmproxy) writes `analysis/output/summary.txt`. `analysis/copilot_report.py` works without mitmproxy and decodes Copilot's chat format; its marker search, host list and tnetstring reader (`analysis/tnetstring_reader.py`) work for any assistant, but the chat-message parsing must be adapted to each extension's own format.
 5. Put transcripts, screenshots, `lab_notes.md` and `RESULTS.md` in `results/<name>/`. **Never commit `.flow` files** (they contain login tokens); keep them on the shared drive.
 
+`tools/auto_merlin.py` automates Merlin the same way; `analysis/merlin_report.py` decodes its chat format.
+
 `tools/auto_copilot.py` automates Copilot only (its sidebar is a page reachable over Edge's DevTools protocol). An
 extension's side panel or popup may also be reachable that way (launch Edge with `--remote-debugging-port`, list
 targets at `http://127.0.0.1:9333/json/list`); the selectors and the "answer finished" check would need rewriting.
@@ -58,6 +60,9 @@ targets at `http://127.0.0.1:9333/json/list`); the selectors and the "answer fin
 - Copilot: the sidebar cannot be opened by script and does not reopen after Edge restarts, so a person clicks it once per session; it sometimes answers with a multiple-choice question that hides the input (click Skip); the free account has a daily usage limit, so E2 (15 prompts) may need two sittings.
 - Assistant chat traffic is often a WebSocket, not normal requests: check client-to-server WebSocket messages, not only request bodies.
 - Number markers (like an age "67") match random traffic; use unique codes like `ZQX-E1-FRM-6612` as markers.
+- Merlin: only reads `https://` pages (`auto_merlin.py` serves the test pages as `https://soen321.test/`).
+- An assistant that reads the open tab will read the runbook, which lists the persona prompts. Run E2 on
+  `test_pages/e2_neutral.html`.
 
 ## Conventions
 - Recordings: `evidence/<assistant>/E<n>_run<r>.flow` (created by `record.ps1`, never committed)

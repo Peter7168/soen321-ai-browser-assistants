@@ -14,7 +14,8 @@ def parse(path):
         m = re.match(r"\d+\. \[(\w+)\]", blk)
         if not m or not m.group(1).startswith(("samechat", "newchat")): continue
         prompt = re.search(r"\*\*Prompt:\*\* (.*)", blk).group(1)
-        ans = blk.split("**Copilot:**", 1)[1] if "**Copilot:**" in blk else ""
+        parts = re.split(r"\*\*(?:Copilot|Merlin):\*\*", blk, maxsplit=1)
+        ans = parts[1] if len(parts) > 1 else ""
         ans = ans.split("\nSources")[0]
         yield m.group(1), prompt, ans
 rows = []
