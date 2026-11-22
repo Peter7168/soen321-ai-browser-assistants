@@ -1,0 +1,12 @@
+- 2026-11-15 11:01 | E0 run 1 | Edge 157.0.4341.46 | 1699 KB | notes: setup only
+- 2026-11-15 11:03 | E0 run 2 | Edge 157.0.4341.60 | 63090 KB | notes: setup only. A lookalike extension (DeepSider 3.2.22) had been installed by mistake; found on 2026-11-22 and removed
+- 2026-11-22 before the runs | setup | Edge | - | notes: installed the real Sider 5.35.8 from the Chrome Web Store (id difoiogjjojoaoomphldepapgpbgkhkb), signed in with a throwaway account. Free plan: 260 credits. Default model Sider Fusion
+- 2026-11-22 17:15-17:38 | E1 run 1 (first attempts) | discarded: typed questions only (Sider said it saw no page; kept as typed_only_attempt/), then attempts stopped for script fixes (New chat check, wrong text box, busy detection). Redone below
+- 2026-11-22 17:40 | E1 run 1 | Edge, Sider 5.35.8 (automated via DevTools protocol) | 651 KB | notes: run by tools/auto_sider.py
+- 2026-11-22 17:43 | E3 run 1 | Edge, Sider 5.35.8 (automated via DevTools protocol) | 389 KB | notes: run by tools/auto_sider.py
+- 2026-11-22 17:44 | E4 run 1 | Edge, Sider 5.35.8 (automated via DevTools protocol) | 251 KB | notes: run by tools/auto_sider.py
+- 2026-11-22 17:46 | E1 run 2 | Edge, Sider 5.35.8 (automated via DevTools protocol) | 804 KB | notes: run by tools/auto_sider.py
+- 2026-11-22 17:48 | E3 run 2 | Edge, Sider 5.35.8 (automated via DevTools protocol) | 395 KB | notes: run by tools/auto_sider.py
+- 2026-11-22 17:49 | E4 run 2 | Edge, Sider 5.35.8 (automated via DevTools protocol) | 247 KB | notes: run by tools/auto_sider.py
+- 2026-11-22 17:56 | E2 run 1 | Edge, Sider 5.35.8 (automated via DevTools protocol) | 1329 KB | notes: run by tools/auto_sider.py
+- 2026-11-22 18:00 | E2 run 2 | Edge, Sider 5.35.8 (automated via DevTools protocol) | 1374 KB | notes: run by tools/auto_sider.py

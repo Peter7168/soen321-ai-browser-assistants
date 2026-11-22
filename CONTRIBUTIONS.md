@@ -14,7 +14,10 @@
 -
 
 ## Maria-Christine
--
+- Ran E1 to E4 on Sider (2 runs each), analyzed the recordings and wrote up the results (`results/sider/`)
+- Automated the Sider experiments over Edge's DevTools protocol, with a probe mode to check the setup first (`tools/auto_sider.py`)
+- Wrote the Sider analysis script, which searches every request and WebSocket message without needing Sider's message format (`analysis/sider_report.py`)
+- Wrote the Sider run guide (`results/sider/HOW_TO_RUN.md`) and extended the E2 scoring to Sider and Perplexity transcripts
 
 ## Parsa
 -

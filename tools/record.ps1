@@ -24,6 +24,10 @@ $flow = "$outDir\${Experiment}_run$Run.flow"
 if ((Test-Path $flow) -and -not $Force) { throw "$flow already exists. Use a different -Run number, or add -Force to overwrite." }
 if (Test-Path $flow) { Remove-Item $flow }
 
+# Stop a recorder or test-page server left running by an earlier script that was interrupted (only ours, from .venv)
+Get-CimInstance Win32_Process | Where-Object { $_.ExecutablePath -like "$root\.venv\*" -and ($_.Name -eq "mitmdump.exe" -or $_.CommandLine -like "*http.server*") } |
+    ForEach-Object { Stop-Process -Id $_.ProcessId -Force }
+
 # Local server for our test pages
 $server = Start-Process .venv\Scripts\python.exe -ArgumentList "-m http.server 8765 --bind 127.0.0.1 --directory test_pages" -PassThru -WindowStyle Hidden
 

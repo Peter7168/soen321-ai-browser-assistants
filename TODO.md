@@ -20,11 +20,11 @@ Vekaria et al., USENIX Security 2025. Each assistant: E1 to E4, 2 runs each = 8 
 - [x] Team setup guide (`SETUP_GUIDE.md`)
 - [x] **Copilot in Edge: all four experiments done and written up** (`results/copilot/RESULTS.md`)
 - [x] **Merlin: all four experiments done (2 runs each) and written up** (`results/merlin/RESULTS.md`)
+- [x] **Sider: all four experiments done (2 runs each) and written up** (`results/sider/RESULTS.md`)
 
 ## Remaining tasks
 
 ### Experiments
-- [ ] **Sider**: E1 to E4, 2 runs each
 - [ ] **Perplexity**: E1 to E4, 2 runs each
 - [ ] Copilot, optional: finish E2 run 4's new-chat questions (stopped at the daily limit)
 - [ ] Copilot, optional: check by hand whether Copilot asks permission before reading other tabs
@@ -46,6 +46,9 @@ Vekaria et al., USENIX Security 2025. Each assistant: E1 to E4, 2 runs each = 8 
 5. Put transcripts, screenshots, `lab_notes.md` and `RESULTS.md` in `results/<name>/`. **Never commit `.flow` files** (they contain login tokens); keep them on the shared drive.
 
 `tools/auto_merlin.py` automates Merlin the same way; `analysis/merlin_report.py` decodes its chat format.
+`tools/auto_sider.py` automates Sider; it finds the chat box and buttons by role, so `tools/auto_sider.py probe` shows
+what it can see before the real runs. `analysis/sider_report.py` does not need Sider's format: it searches every
+request and WebSocket message, so it is a good starting point for Perplexity too.
 
 `tools/auto_copilot.py` automates Copilot only (its sidebar is a page reachable over Edge's DevTools protocol). An
 extension's side panel or popup may also be reachable that way (launch Edge with `--remote-debugging-port`, list
@@ -61,6 +64,9 @@ targets at `http://127.0.0.1:9333/json/list`); the selectors and the "answer fin
 - Assistant chat traffic is often a WebSocket, not normal requests: check client-to-server WebSocket messages, not only request bodies.
 - Number markers (like an age "67") match random traffic; use unique codes like `ZQX-E1-FRM-6612` as markers.
 - Merlin: only reads `https://` pages (`auto_merlin.py` serves the test pages as `https://soen321.test/`).
+- Sider: only reads the page when its Summarize button is clicked (the script does this), and only shows that button
+  on article-like pages. Its New chat button has no label, so a person clicks it when the script asks. Install the real
+  "Sider: Chat with all AI" (sider.ai); lookalikes such as DeepSider exist.
 - An assistant that reads the open tab will read the runbook, which lists the persona prompts. Run E2 on
   `test_pages/e2_neutral.html`.
 
